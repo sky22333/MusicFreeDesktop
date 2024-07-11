@@ -1,9 +1,8 @@
 name: 打包
 on:
   workflow_dispatch:
-
 jobs:
-  build-windows:
+  build-windows: 
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -14,27 +13,55 @@ jobs:
       - run: npm install
       - run: npm run package
       - uses: maotoumao/inno-setup-action-cli@main
-        with:
-          filepath: ./release/build-windows.iss
-          variables: /DMyAppVersion=${{ env.VERSION }} /DMyAppId=${{ secrets.MYAPPID }}
+        with: 
+            filepath: ./release/build-windows.iss
+            variables: /DMyAppVersion=${{ env.VERSION }} /DMyAppId=${{ secrets.MYAPPID }}
       - name: Upload Setup
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFreeSetup-windows.exe
-          path: ./out/MusicFreeSetup.exe
+            name: windows-release
+            path: ./out/MusicFreeSetup.exe
       - name: Generate Portable
         run: mkdir ./out/MusicFree-win32-x64/portable
       - uses: vimtor/action-zip@v1.1
         with:
           files: ./out/MusicFree-win32-x64
-          dest: ./out/MusicFree-win32-x64.zip
+          dest: MusicFree-win32-x64-portable.zip
       - name: Upload Portable
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFree-win32-x64.zip
-          path: ./out/MusicFree-win32-x64.zip
+            name: windows-portable-release
+            path: ${{ github.workspace }}/MusicFree-win32-x64-portable.zip
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}
+          release_name: Release ${{ env.VERSION }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./out/MusicFreeSetup.exe
+          asset_name: MusicFreeSetup.exe
+          asset_content_type: application/octet-stream
+      - name: Upload Release Asset (Portable)
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ github.workspace }}/MusicFree-win32-x64-portable.zip
+          asset_name: MusicFree-win32-x64-portable.zip
+          asset_content_type: application/zip
 
-  build-windows-legacy:
+  build-windows-legacy: 
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -46,27 +73,55 @@ jobs:
       - run: npm install electron@22
       - run: npm run package
       - uses: maotoumao/inno-setup-action-cli@main
-        with:
-          filepath: ./release/build-windows.iss
-          variables: /DMyAppVersion=${{ env.VERSION }} /DMyAppId=${{ secrets.MYAPPID }}
+        with: 
+            filepath: ./release/build-windows.iss
+            variables: /DMyAppVersion=${{ env.VERSION }} /DMyAppId=${{ secrets.MYAPPID }}
       - name: Upload Setup
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFreeSetup-windows-legacy.exe
-          path: ./out/MusicFreeSetup.exe
+            name: windows-legacy-release
+            path: ./out/MusicFreeSetup.exe
       - name: Generate Portable
         run: mkdir ./out/MusicFree-win32-x64/portable
       - uses: vimtor/action-zip@v1.1
         with:
           files: ./out/MusicFree-win32-x64
-          dest: ./out/MusicFree-win32-x64-legacy.zip
+          dest: MusicFree-win32-x64-legacy-portable.zip
       - name: Upload Portable
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFree-win32-x64-legacy.zip
-          path: ./out/MusicFree-win32-x64-legacy.zip
+            name: windows-legacy-portable-release
+            path: ${{ github.workspace }}/MusicFree-win32-x64-legacy-portable.zip
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}-legacy
+          release_name: Release ${{ env.VERSION }} (Legacy)
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./out/MusicFreeSetup.exe
+          asset_name: MusicFreeSetup-legacy.exe
+          asset_content_type: application/octet-stream
+      - name: Upload Release Asset (Portable)
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ github.workspace }}/MusicFree-win32-x64-legacy-portable.zip
+          asset_name: MusicFree-win32-x64-legacy-portable.zip
+          asset_content_type: application/zip
 
-  build-macos-x64:
+  build-macos-x64: 
     runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
@@ -83,10 +138,29 @@ jobs:
       - name: Upload Setup
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFree-macos-x64.dmg
-          path: ./out/make/MusicFree-${{ env.VERSION }}-x64.dmg
+            name: macos-x64-dmg-release
+            path: ./out/make/MusicFree-${{ env.VERSION }}-x64.dmg
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}-macos-x64
+          release_name: Release ${{ env.VERSION }} (macOS x64)
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./out/make/MusicFree-${{ env.VERSION }}-x64.dmg
+          asset_name: MusicFree-${{ env.VERSION }}-x64.dmg
+          asset_content_type: application/octet-stream
 
-  build-macos-arm64:
+  build-macos-arm64: 
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -102,10 +176,29 @@ jobs:
       - name: Upload Setup
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFree-macos-arm64.dmg
-          path: ./out/make/MusicFree-${{ env.VERSION }}-arm64.dmg
+            name: macos-arm64-dmg-release
+            path: ./out/make/MusicFree-${{ env.VERSION }}-arm64.dmg
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}-macos-arm64
+          release_name: Release ${{ env.VERSION }} (macOS arm64)
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./out/make/MusicFree-${{ env.VERSION }}-arm64.dmg
+          asset_name: MusicFree-${{ env.VERSION }}-arm64.dmg
+          asset_content_type: application/octet-stream
 
-  build-ubuntu:
+  build-ubuntu: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -118,44 +211,24 @@ jobs:
       - name: Upload Setup
         uses: actions/upload-artifact@v4
         with:
-          name: MusicFree-ubuntu
-          path: ./out/make/deb/x64/
-
-  release:
-    needs: [build-windows, build-windows-legacy, build-macos-x64, build-macos-arm64, build-ubuntu]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFreeSetup-windows.exe
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFree-win32-x64.zip
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFreeSetup-windows-legacy.exe
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFree-win32-x64-legacy.zip
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFree-macos-x64.dmg
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFree-macos-arm64.dmg
-          path: ./artifacts
-      - uses: actions/download-artifact@v4
-        with:
-          name: MusicFree-ubuntu
-          path: ./artifacts
+            name: ubuntu-release
+            path: ./out/make/deb/x64/
       - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ./artifacts/*
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.VERSION }}-ubuntu
+          release_name: Release ${{ env.VERSION }} (Ubuntu)
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./out/make/deb/x64/
+          asset_name: MusicFree-${{ env.VERSION }}-x64.deb
+          asset_content_type: application/octet-stream
