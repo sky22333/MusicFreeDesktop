@@ -1,4 +1,4 @@
-name: 构建打包
+name: 打包
 on:
   workflow_dispatch:
 
@@ -133,11 +133,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Create Release Tag
         env:
-          VERSION: ${{ env.VERSION }}
+          VERSION: ${{ needs.build-windows.outputs.VERSION }}
         run: |
           git fetch --prune --unshallow
-          git tag v${VERSION}
-          git push origin v${VERSION}
+          git tag v${{ env.VERSION }}
+          git push origin v${{ env.VERSION }}
       - uses: actions/download-artifact@v4
         with:
           name: MusicFreeSetup-windows.exe
