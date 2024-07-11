@@ -132,9 +132,12 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Create Release Tag
+        env:
+          VERSION: ${{ env.VERSION }}
         run: |
-          git tag v${{ env.VERSION }}
-          git push origin v${{ env.VERSION }}
+          git fetch --prune --unshallow
+          git tag v${VERSION}
+          git push origin v${VERSION}
       - uses: actions/download-artifact@v4
         with:
           name: MusicFreeSetup-windows.exe
