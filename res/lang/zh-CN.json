@@ -238,7 +238,7 @@
       "short_cut": "快捷键",
       "network": "网络",
       "backup": "备份与恢复",
-      "about": "关于 MusicFree"
+      "about": "致敬开源"
     },
     "normal": {
       "check_update": "应用启动时检测软件版本更新",
@@ -337,9 +337,9 @@
       "current_version": "当前版本: {{version}}",
       "already_latest": "当前已是最新版本!",
       "check_update": "检查更新",
-      "software_author": "软件作者: ",
+      "software_author": "开源软件",
       "open_source_declaration": "软件基于 GPL3.0 协议开源",
-      "official_site": "软件官网",
+      "official_site": "开源软件",
       "mobile_version": "移动版"
     }
   },

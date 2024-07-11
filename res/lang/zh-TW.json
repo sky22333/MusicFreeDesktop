@@ -251,7 +251,7 @@
       "max_history_length": "搜尋歷史記錄最大數量",
       "music_list_hide_columns": "歌曲列表隱藏列",
       "languages": "語言",
-      "toast_switch_language_fail": "切換語言失敗"
+      "toast_switch_language_fail": "没有这个语言哦~"
     },
     "play_music": {
       "case_sensitive_in_search": "搜尋歌單時區分大小寫",
