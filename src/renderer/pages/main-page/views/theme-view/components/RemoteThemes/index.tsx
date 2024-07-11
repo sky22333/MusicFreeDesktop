@@ -16,16 +16,6 @@ export default function RemoteThemes() {
 
   return (
     <div className="remote-themes-container">
-      <div className="remote-themes-description">
-        <Trans
-          i18nKey={"theme.how_to_submit_new_theme"}
-          components={{
-            Github: (
-              <A href="https://github.com/maotoumao/MusicFreeThemePacks"></A>
-            ),
-          }}
-        ></Trans>
-      </div>
       <SwitchCase.Switch switch={loadingState}>
         <SwitchCase.Case case={RequestStateCode.PENDING_FIRST_PAGE}>
           <Loading></Loading>

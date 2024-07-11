@@ -84,7 +84,6 @@ async function changeWatchPath(addPaths?: string[], rmPaths?: string[]) {
     if (rmPaths?.length) {
       watcher.unwatch(rmPaths);
       /**
-       * chokidar的bug: https://github.com/paulmillr/chokidar/issues/1027
        * unwatch之后重新watch不会触发文件更新
        */
       rmPaths.forEach((it) => {

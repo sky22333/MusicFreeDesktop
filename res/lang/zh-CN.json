@@ -30,22 +30,17 @@
     "open": "打开",
     "status": "状态"
   },
-
   "media": {
     "unknown_title": "未命名",
     "unknown_artist": "未知作者",
     "unknown_album": "未知专辑",
-
     "default_favorite_sheet_name": "我喜欢",
-
     "playlist": "播放列表",
-
     "media_type_music": "音乐",
     "media_type_album": "专辑",
     "media_type_artist": "作者",
     "media_type_sheet": "歌单",
     "media_type_lyric": "歌词",
-
     "media_title": "标题",
     "media_platform": "来源",
     "media_duration": "时长",
@@ -53,7 +48,6 @@
     "media_play_count": "播放数",
     "media_music_count": "歌曲数",
     "media_description": "简介",
-
     "music_state_pause": "暂停",
     "music_state_play": "播放",
     "music_state_play_or_pause": "播放/暂停",
@@ -61,25 +55,21 @@
     "music_quality_standard": "标准音质",
     "music_quality_high": "高音质",
     "music_quality_super": "超高音质",
-
     "music_repeat_mode": "播放模式",
     "music_repeat_mode_loop": "单曲循环",
     "music_repeat_mode_queue": "列表循环",
     "music_repeat_mode_shuffle": "随机播放"
   },
-
   "plugin": {
     "prop_user_variable": "用户变量",
     "method_search": "搜索",
     "method_import_music_item": "导入单曲",
     "method_import_music_sheet": "导入歌单",
     "method_get_top_lists": "排行榜",
-
     "info_hint_you_have_no_plugin": "你还没有安装插件",
     "info_hint_you_have_no_plugin_with_supported_method": "你还没有安装支持<highlight> {{supportMethod}} </highlight>功能的插件",
     "info_hint_install_plugin_before_use": "先去<a>插件管理</a> 安装插件吧~"
   },
-
   "download_page": {
     "waiting": "等待中...",
     "failed": "下载失败"
@@ -98,23 +88,19 @@
     "installing": "正在安装",
     "info_hint_install_placeholder": "请输入插件源地址(链接以json或js结尾)",
     "error_hint_plugin_should_end_with_js_or_json": "插件链接需要以json或者js结尾",
-    "info_hint_install_plugin": "插件需要满足 MusicFree 特定的插件协议，具体可在<a>官方网站</a>中查看",
+    "info_hint_install_plugin": "插件需要满足 MusicFree 特定的插件协议",
     "subscription_setting": "订阅设置",
     "update_subscription": "更新订阅",
     "update_successfully": "更新成功",
     "no_subscription": "当前无订阅",
-
     "uninstall": "卸载",
     "uninstall_plugin": "卸载插件",
     "confirm_text_uninstall_plugin": "确认卸载插件 {{plugin}} 吗?",
     "uninstall_successfully": "已卸载 {{plugin}}",
     "uninstall_failed": "卸载失败",
-
     "toast_plugin_is_latest": "插件 {{plugin}} 已更新到最新版本",
     "update_failed": "更新失败",
-
     "update": "更新",
-
     "importing_media": "正在导入中",
     "placeholder_import_music_item": "输入 {{plugin}} 单曲链接",
     "import_failed": "导入失败",
@@ -130,7 +116,6 @@
     "folder_view": "文件夹视图",
     "total_music_num": "共 {{number}} 首"
   },
-
   "music_list_context_menu": {
     "next_play": "下一首播放",
     "add_to_my_sheets": "添加到歌单",
@@ -138,11 +123,9 @@
     "delete_local_download": "删除本地下载",
     "reveal_local_music_in_file_explorer": "打开歌曲所在文件夹",
     "reveal_local_music_in_file_explorer_fail": "打开失败: ",
-
     "delete_local_downloaded_songs_success": "已删除 {{musicNums}} 首本地歌曲",
     "delete_local_downloaded_song_success": "已删除本地歌曲 [{{songName}}]"
   },
-
   "search_result_page": {
     "search_result_title": "的搜索结果"
   },
@@ -152,11 +135,9 @@
     "download_management": "下载管理",
     "local_music": "本地音乐",
     "plugin_management": "插件管理",
-
     "my_sheets": "我的歌单",
     "create_local_sheet": "新建歌单",
     "starred_sheets": "我的收藏",
-
     "delete_sheet": "删除歌单",
     "rename_sheet": "重命名歌单",
     "unstar_sheet": "取消收藏",
@@ -188,14 +169,12 @@
   "music_detail": {
     "search_lyric": "搜索歌词",
     "no_lyric": "暂无歌词",
-
     "lyric_ctx_download_lyric": "下载歌词",
     "lyric_ctx_download_lyric_lrc": "下载歌词 (.lrc)",
     "lyric_ctx_download_lyric_txt": "下载歌词 (.txt)",
     "lyric_ctx_download_success": "下载成功",
     "lyric_ctx_download_fail": "下载失败",
     "lyric_ctx_set_font_size": "设置字号",
-
     "link_media_lyric": "关联歌词",
     "media_lyric_linked": "已关联歌词: ",
     "unlink_media_lyric": "取消关联歌词",
@@ -249,7 +228,6 @@
     "change_path": "更改路径",
     "folder_not_exist": "文件夹不存在",
     "open_folder": "打开文件夹",
-
     "section_name": {
       "normal": "常规",
       "play_music": "播放",
@@ -360,7 +338,7 @@
       "already_latest": "当前已是最新版本!",
       "check_update": "检查更新",
       "software_author": "软件作者: ",
-      "open_source_declaration": "源代码: 软件基于 GPL3.0 协议开源.  <Github>Github地址</Github>  <Gitee>Gitee地址</Gitee>",
+      "open_source_declaration": "软件基于 GPL3.0 协议开源",
       "official_site": "软件官网",
       "mobile_version": "移动版"
     }
@@ -388,7 +366,7 @@
     "install_theme_fail": "安装主题失败: {{reason}}",
     "uninstall_theme_success": "卸载主题{{name}}成功~",
     "uninstall_theme_fail": "卸载主题失败: {{reason}}",
-    "how_to_submit_new_theme": "💡如何提交新主题: 主题市场中的主题与 <Github>MusicFreeThemePacks</Github> 仓库同步，如果需要提交新主题请直接提PR。",
+    "how_to_submit_new_theme": "💡",
     "load_remote_theme_error": "出错啦...",
     "invalid_theme": "主题无效: {{reason}}"
   }

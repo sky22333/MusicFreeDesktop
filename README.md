@@ -15,12 +15,6 @@
 一个插件化、定制化、无广告的免费音乐播放器。
 > 当前测试版支持 windows 和 macos x64；macos m1/m2 和 linux 可自行打包。
 
-<img src="./src/assets/imgs/wechat_channel1.png" height="144px" title="微信公众号" style="display:inherit;"/>
-
-
-### 下载地址
-
-[蓝奏云下载地址](https://wwzb.lanzoue.com/b042da1xe)
 
 ## 特性
 

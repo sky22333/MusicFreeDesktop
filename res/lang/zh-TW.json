@@ -30,22 +30,17 @@
     "open": "打開",
     "status": "狀態"
   },
-
   "media": {
     "unknown_title": "無標題",
     "unknown_artist": "未知藝術家",
     "unknown_album": "未知專輯",
-
     "default_favorite_sheet_name": "喜愛",
-
     "playlist": "播放清單",
-
     "media_type_music": "音樂",
     "media_type_album": "專輯",
     "media_type_artist": "藝術家",
     "media_type_sheet": "歌單",
     "media_type_lyric": "歌詞",
-
     "media_title": "標題",
     "media_platform": "來源",
     "media_duration": "時長",
@@ -53,7 +48,6 @@
     "media_play_count": "播放次數",
     "media_music_count": "歌曲數量",
     "media_description": "描述",
-
     "music_state_pause": "暫停",
     "music_state_play": "播放",
     "music_state_play_or_pause": "播放/暫停",
@@ -61,25 +55,21 @@
     "music_quality_standard": "標準音質",
     "music_quality_high": "高音質",
     "music_quality_super": "超高音質",
-
     "music_repeat_mode": "重複模式",
     "music_repeat_mode_loop": "單曲重複",
     "music_repeat_mode_queue": "列表重複",
     "music_repeat_mode_shuffle": "隨機播放"
   },
-
   "plugin": {
     "prop_user_variable": "用戶變量",
     "method_search": "搜尋",
     "method_import_music_item": "導入歌曲",
     "method_import_music_sheet": "導入歌單",
     "method_get_top_lists": "排行榜",
-
     "info_hint_you_have_no_plugin": "你尚未安裝任何插件",
     "info_hint_you_have_no_plugin_with_supported_method": "你尚未安裝支持 <highlight>{{supportMethod}}</highlight> 的插件",
     "info_hint_install_plugin_before_use": "請先前往 <a>插件管理</a> 安裝插件~"
   },
-
   "download_page": {
     "waiting": "等待中...",
     "failed": "下載失敗"
@@ -98,23 +88,19 @@
     "installing": "安裝中",
     "info_hint_install_placeholder": "輸入插件來源 URL（以 json 或 js 結尾）",
     "error_hint_plugin_should_end_with_js_or_json": "插件 URL 應以 json 或 js 結尾",
-    "info_hint_install_plugin": "插件需符合 MusicFree 特定協議，詳情請參考 <a>官方頁面</a>",
+    "info_hint_install_plugin": "插件需符合 MusicFree 特定協議",
     "subscription_setting": "訂閱設定",
     "update_subscription": "更新訂閱",
     "update_successfully": "更新成功",
     "no_subscription": "當前沒有訂閱",
-
     "uninstall": "卸載",
     "uninstall_plugin": "卸載插件",
     "confirm_text_uninstall_plugin": "確認卸載插件 {{plugin}}？",
     "uninstall_successfully": "插件 {{plugin}} 已卸載",
     "uninstall_failed": "卸載失敗",
-
     "toast_plugin_is_latest": "插件 {{plugin}} 已是最新版本",
     "update_failed": "更新失敗",
-
     "update": "更新",
-
     "importing_media": "導入中",
     "placeholder_import_music_item": "輸入 {{plugin}} 歌曲 URL",
     "import_failed": "導入失敗",
@@ -130,7 +116,6 @@
     "folder_view": "文件夾視圖",
     "total_music_num": "共 {{number}} 首歌曲"
   },
-
   "music_list_context_menu": {
     "next_play": "下一首播放",
     "add_to_my_sheets": "添加到我的歌單",
@@ -138,11 +123,9 @@
     "delete_local_download": "刪除本地下載",
     "reveal_local_music_in_file_explorer": "打開歌曲文件夾",
     "reveal_local_music_in_file_explorer_fail": "打開失敗：",
-
     "delete_local_downloaded_songs_success": "已刪除 {{musicNums}} 首本地歌曲",
     "delete_local_downloaded_song_success": "已刪除本地歌曲 [{{songName}}]"
   },
-
   "search_result_page": {
     "search_result_title": "搜尋結果"
   },
@@ -152,11 +135,9 @@
     "download_management": "下載管理",
     "local_music": "本地音樂",
     "plugin_management": "插件管理",
-
     "my_sheets": "我的歌單",
     "create_local_sheet": "創建歌單",
     "starred_sheets": "我的收藏",
-
     "delete_sheet": "刪除歌單",
     "rename_sheet": "重歌單",
     "unstar_sheet": "取消收藏",
@@ -188,14 +169,12 @@
   "music_detail": {
     "search_lyric": "搜尋歌詞",
     "no_lyric": "暫無歌詞",
-
     "lyric_ctx_download_lyric": "下載歌詞",
     "lyric_ctx_download_lyric_lrc": "下載歌詞 (.lrc)",
     "lyric_ctx_download_lyric_txt": "下載歌詞 (.txt)",
     "lyric_ctx_download_success": "下載成功",
     "lyric_ctx_download_fail": "下載失敗",
     "lyric_ctx_set_font_size": "設置字體大小",
-
     "link_media_lyric": "鏈接歌詞",
     "media_lyric_linked": "已鏈接歌詞：",
     "unlink_media_lyric": "取消鏈接歌詞",
@@ -249,7 +228,6 @@
     "change_path": "更改路徑",
     "folder_not_exist": "文件夾不存在",
     "open_folder": "打開文件夾",
-
     "section_name": {
       "normal": "一般",
       "play_music": "播放",
@@ -360,7 +338,7 @@
       "already_latest": "已是最新版本！",
       "check_update": "檢查更新",
       "software_author": "軟件作者：",
-      "open_source_declaration": "源碼：軟件是基於 GPL3.0 授權的開源軟件。<Github>Github 地址</Github> <Gitee>Gitee 地址</Gitee>",
+      "open_source_declaration": "",
       "official_site": "官方網站",
       "mobile_version": "移動版"
     }
@@ -388,7 +366,7 @@
     "install_theme_fail": "安裝主題失敗: {{reason}}",
     "uninstall_theme_success": "卸載主題{{name}}成功~",
     "uninstall_theme_fail": "卸載主題失敗: {{reason}}",
-    "how_to_submit_new_theme": "💡如何提交新主題: 主題市場中的主題與 <Github>MusicFreeThemePacks</Github> 倉庫同步，如果需要提交新主題請直接提PR。",
+    "how_to_submit_new_theme": "💡",
     "load_remote_theme_error": "出錯啦...",
     "invalid_theme": "主題無效: {{reason}}"
   }

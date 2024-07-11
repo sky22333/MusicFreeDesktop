@@ -1,5 +1,5 @@
 /**
- * https://github.com/electron/electron/issues/1354#issuecomment-1356330873
+ * 
  */
 
 import { BrowserWindow } from "electron";
