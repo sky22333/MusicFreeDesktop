@@ -6,7 +6,7 @@
 #define MyAppVersion "0.0.0-alpha.0"
 #endif
 #define MyAppPublisher "maotoumao"
-#define MyAppURL ""
+#define MyAppURL "https://musicfree.upup.fun"
 #define MyAppExeName "MusicFree.exe"
 #ifndef MyAppId
 #define MyAppId
