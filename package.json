@@ -14,11 +14,6 @@
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": {
-    "name": "猫头猫",
-    "email": "lhx_xjtu@163.com"
-  },
   "license": "GPL",
   "lint-staged": {
     "src/**/*.{ts,tsx,js}": [
