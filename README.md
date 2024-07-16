@@ -1,6 +1,6 @@
 # MusicFree 桌面版
 
-### [直接下载win系统免安装版本](https://github.com/sky22333/MusicFreeDesktop/releases/download/v0.0.5/MusicFreeSetup.exe)
+### [直接下载win系统版本](https://github.com/sky22333/MusicFreeDesktop/releases/download/v0.0.5-legacy/MusicFreeSetup-legacy.exe)
 ---
 
 ### 网上收集的音乐源
