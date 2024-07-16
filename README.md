@@ -6,39 +6,30 @@
 ### 网上收集的音乐源
 ```
 QQ音乐
-
 http://adad23u.appinstall.life/dist/qq/index.js
 
 网易云音乐
-
 https://gitee.com/raycn120/musicfree/raw/master/netease.js
 
 酷我音乐
-
 http://adad23u.appinstall.life/dist/kuwo/index.js
 
 咪咕音乐
-
 http://adad23u.appinstall.life/dist/migu/index.js
 
 Bilibili
-
 http://adad23u.appinstall.life/dist/bilibili/index.js
 
 综合插件（集合多个音乐源）
-
 https://gitlab.com/acoolbook/musicfree/-/raw/main/music.json
 
 备用集合音源
-
 https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json
 
 排行榜插件
-
 https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/suno/index.js
 
 排行榜插件
-
 https://gitee.com/maotoumao/MusicFreePlugins/raw/v0.1/dist/udio/index.js
 ```
 ---
