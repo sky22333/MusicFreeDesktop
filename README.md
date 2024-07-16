@@ -1,4 +1,4 @@
-# MusicFree 桌面版
+# MusicFree免费音乐播放器
 
 ### [下载win系统安装包](https://github.com/sky22333/MusicFreeDesktop/releases/tag/v0.0.5-legacy)
 
